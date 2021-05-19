@@ -44,7 +44,6 @@ export default {
   async mounted() {
     const response = await axios.get("api/activities");
     this.trakingData = response.data;
-    console.log(response.data);
   },
 };
 </script>
