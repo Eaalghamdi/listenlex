@@ -1,8 +1,6 @@
 <template>
   <section class="player marginTop9">
-    <h2 class="song-title">
-      {{ current.title }} / 40 hello {{ $store.state.studentID }}
-    </h2>
+    <h2 class="song-title">{{ current.title }} / 40</h2>
 
     <div class="controls">
       <button class="prev" @click="repeat">Repeat</button>
@@ -217,12 +215,12 @@ export default {
       this.isPlaying = true;
       this.trakingData.push({
         studentID: this.$store.state.studentID,
-        audio: this.index,
+        audio: this.index + 1,
         play: true,
         stop: false,
       });
       this.submitData();
-      console.log(this.trakingData[0]);
+      console.log(this.trakingData[this.trakingData.length - 1]);
     },
     pause() {
       this.player.pause();

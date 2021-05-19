@@ -5,7 +5,7 @@
     </div>
 
     <div class="p-col-8 p-offset-2">
-      <DataTable :value="trakingData" ref="dt" responsiveLayout="scroll">
+      <DataTable :value="trakingData" ref="dt" :paginator="true" :rows="10">
         <template #header>
           <div style="text-align: left">
             <Button
