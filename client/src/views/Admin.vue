@@ -18,7 +18,7 @@
         <Column field="studentID" header="Student ID"></Column>
         <Column field="audio" header="Audio"></Column>
         <Column field="play" header="Play"></Column>
-        <Column field="stop" header="Stop"></Column>
+        <Column field="date" header="Time"></Column>
       </DataTable>
     </div>
   </div>
