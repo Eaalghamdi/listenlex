@@ -4,7 +4,6 @@ const mongoose = require('mongoose')
 const { PORT, mongoUri } = require('./config')
 const cors = require('cors')
 const morgan = require('morgan')
-const bodyParser = require('body-parser')
 const activitiesRoutes = require('./routes/api/activities')
 const path = require('path')
 
