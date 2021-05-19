@@ -11,8 +11,9 @@ const path = require('path')
 
 app.use(cors())
 app.use(morgan('tiny'))
-app.use(bodyParser.json())
 
+app.use(express.json());
+app.use(express.urlencoded({extended: true})); 
 mongoose
     .connect(mongoUri, {
         useNewUrlParser: true,
