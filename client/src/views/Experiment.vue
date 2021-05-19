@@ -247,8 +247,8 @@ export default {
       this.current = this.audios[this.index];
       this.play(this.current);
     },
-    async submitData() {
-      await axios
+    submitData() {
+      axios
         .post("api/activities", this.trakingData[0])
         .then(
           function() {
