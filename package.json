@@ -10,7 +10,8 @@
     "start": "node server.js"
   },
   "engines": {
-    "node": "10.x"
+    "node": "10.x",
+    "npm": "7.x"
   },
   "author": "Emad Alghamdi",
   "license": "MIT",
