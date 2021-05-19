@@ -251,10 +251,7 @@ export default {
     },
     async submitData() {
       await axios
-        .post(
-          "https://listenlex.herokuapp.com/api/activities/",
-          this.trakingData[0]
-        )
+        .post("api/activities/", this.trakingData[0])
         .then(
           function() {
             this.trakingData = [];
