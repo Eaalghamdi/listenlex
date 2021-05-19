@@ -3,7 +3,7 @@
     <div style="text-align: left" class="p-col-8 p-offset-2 ">
       <p id="instruction">
         You will hear a text read in English. Please listen to the text and try
-        to understand it. Y will hear it in short lines, one line at a time.
+        to understand it. You will hear it in short lines, one line at a time.
       </p>
     </div>
     <div style="text-align: left" class="p-col-8 p-offset-2 p-mb-2">
