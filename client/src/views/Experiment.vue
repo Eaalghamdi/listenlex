@@ -249,7 +249,7 @@ export default {
     },
     submitData() {
       axios
-        .post("api/activities", this.trakingData[0])
+        .post("api/activities", this.trakingData[this.trakingData.length - 1])
         .then(
           function() {
             this.trakingData = [];
