@@ -1,7 +1,7 @@
 const { Router } = require('express')
 const Activities = require('../../models/ListenLexmodels')
-const ALexData = require('../../models/Alexmodels')
-const XLexData = require('../../models/Xlexmodels')
+const ALexData = require('../../models/ALexmodels')
+const XLexData = require('../../models/XLexmodels')
 
 const router = Router()
 
