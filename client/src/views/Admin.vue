@@ -42,7 +42,7 @@ export default {
   },
 
   async mounted() {
-    const response = await axios.get("api/activities");
+    const response = await axios.get("api/listenlex");
     this.trakingData = response.data;
   },
 };

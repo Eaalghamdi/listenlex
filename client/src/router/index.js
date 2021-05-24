@@ -1,31 +1,96 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-import Instruction from '../views/Instruction.vue'
-import Experiment from '../views/Experiment.vue'
-import Finish from '../views/Finish.vue'
+
+
+import ALexHome from '../views/ALexHome.vue'
+import ALexInstruction from '../views/ALexInstruction.vue' 
+import ALexExperiment from '../views/ALexExperiment.vue' 
+import ALexFinish from '../views/LexFinish.vue'
+
+import XLexHome from '../views/XLexHome.vue'
+import XLexInstruction from '../views/XLexInstruction.vue' 
+import XLexExperiment from '../views/XLexExperiment.vue' 
+import XLexFinish from '../views/XLexFinish.vue'
+
+import LexHome from '../views/LexHome.vue'
+import LexInstruction from '../views/LexInstruction.vue'
+import LexExperiment from '../views/LexExperiment.vue'
+import LexFinish from '../views/LexFinish.vue'
 import Admin from '../views/Admin.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'Home',
     component: Home,
   },
   {
-    path: '/instruction',
-    name: 'instruction',
-    component: Instruction,
+    path: '/X-Lex',
+    name: 'XLex',
+    component: XLexHome,
+  },
+  {
+    path: '/X-lex_instrction',
+    name: 'XLexInstruction',
+    component: XLexInstruction,
   },
 
   {
-    path: '/experiment',
-    name: 'experiment',
-    component: Experiment,
+    path: '/X-Lex_experiment',
+    name: 'XLexExperiment',
+    component: XLexExperiment,
   },
   {
-    path: '/finish',
-    name: 'finish',
-    component: Finish,
+    path: '/X-Lex_finish',
+    name: 'XLexFinish',
+    component: XLexFinish,
+  },
+
+
+
+  {
+    path: '/ALex',
+    name: 'ALex',
+    component: ALexHome,
+  },
+  {
+    path: '/A-lex_instrction',
+    name: 'ALexInstruction',
+    component: ALexInstruction,
+  },
+  {
+    path: '/A-Lex_experiment',
+    name: 'ALexExperiment',
+    component: ALexExperiment,
+  },
+  {
+    path: '/A-Lex_finish',
+    name: 'ALexFinish',
+    component: ALexFinish,
+  },
+
+
+
+  {
+    path: '/listenlex',
+    name: 'ListenLex',
+    component: LexHome,
+  },
+  {
+    path: '/ListenLex_instruction',
+    name: 'ListenLexInstruction',
+    component: LexInstruction,
+  },
+
+  {
+    path: '/ListenLex_experiment',
+    name: 'ListenLexExperiment',
+    component: LexExperiment,
+  },
+  {
+    path: '/ListenLex_finish',
+    name: 'ListenLexFinish',
+    component: LexFinish,
   },
   {
     path: '/admin',

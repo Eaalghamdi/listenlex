@@ -1,47 +1,47 @@
 <template>
-  <div class="p-grid marginTop7">
-    <div class="p-col-8 p-offset-2">
-      <p id="instruction">
-        Please type your name or ID in the box below. Press NEXT when you are
-        ready for the instructions
-      </p>
+  <section class="marginTop9">
+    <div class="p-grid p-col-8 p-offset-2  marginTop7">
+      <div class="p-col-4  marginTop3">
+        <Button class="p-button-lg p-button-success" @click="goToALex">
+          <img alt="logo" src="@/assets/alex.png" style="width: 15.5rem" />
+        </Button>
+      </div>
+      <div class="p-col-4  marginTop3">
+        <Button
+          class="p-button-lg p-button-warning"
+          @click="goToXLex"
+          label="Next"
+        >
+          <img alt="logo" src="@/assets/xlex.png" style="width: 15.5rem" />
+        </Button>
+      </div>
+      <div class="p-col-4  marginTop3">
+        <Button class="p-button-lg" @click="goToListenLex">
+          <img alt="logo" src="@/assets/listenlex.png" style="width: 15.5rem" />
+        </Button>
+      </div>
     </div>
-    <div class="p-col-6 p-offset-3 paddingTop">
-      <InputText type="text" v-model="ID" />
-    </div>
-
-    <div v-if="ID !== ''" class="p-col-6 p-offset-3 marginTop3">
-      <Button
-        class="p-button-lg"
-        @click="goInstruction"
-        label="Next"
-        icon="pi pi-arrow-right"
-        iconPos="right"
-      >
-      </Button>
-    </div>
-  </div>
+  </section>
 </template>
 <script>
 export default {
   name: "Home",
-  data() {
-    return {
-      ID: "",
-    };
-  },
 
   methods: {
-    goInstruction() {
-      this.$store.commit("updateStudentID", this.ID);
-      console.log(this.ID);
-      this.$router.push({ name: "instruction" });
+    goToListenLex() {
+      this.$router.push({ name: "ListenLex" });
+    },
+    goToALex() {
+      this.$router.push({ name: "ALex" });
+    },
+    goToXLex() {
+      this.$router.push({ name: "XLex" });
     },
   },
 };
 </script>
 <style scoped>
 .paddingTop {
-  padding-top: 60px;
+  padding-top: 80px;
 }
 </style>

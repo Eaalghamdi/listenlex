@@ -4,7 +4,8 @@ const mongoose = require('mongoose')
 const { PORT, mongoUri } = require('./config')
 const cors = require('cors')
 const morgan = require('morgan')
-const activitiesRoutes = require('./routes/api/activities')
+const activitiesRoutes = require('./routes/api/endpoints')
+
 const path = require('path')
 
 
@@ -23,7 +24,8 @@ mongoose
     .then(() => console.log('MongoDB database Connected...'))
     .catch((err) => console.log(err))
 
-app.use('/api/activities', activitiesRoutes)
+app.use('/api/', activitiesRoutes)
+
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/dist'))
