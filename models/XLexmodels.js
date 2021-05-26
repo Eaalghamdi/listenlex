@@ -22,7 +22,7 @@ const XLexSchema = new Schema({
         required: true,
     },
     word: {
-        type: Number,
+        type: String,
         required: true,
     }
 })
