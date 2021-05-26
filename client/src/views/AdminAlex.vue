@@ -20,9 +20,7 @@
     <div class="p-col-8 p-offset-2">
       <DataTable :value="trakingData" ref="dt" :paginator="true" :rows="10">
         <template #header>
-          <div>
-            <h2>ListenLex</h2>
-          </div>
+          <h2>A-Lex</h2>
           <div style="text-align: left">
             <Button
               icon="pi pi-external-link"
@@ -33,8 +31,9 @@
           </div>
         </template>
         <Column field="studentID" header="Student ID"></Column>
-        <Column field="audio" header="Audio"></Column>
-        <Column field="play" header="Play"></Column>
+        <Column field="word" header="Word"></Column>
+        <Column field="yes" header="Yes"></Column>
+        <Column field="no" header="No"></Column>
         <Column field="date" header="Time"></Column>
       </DataTable>
     </div>
@@ -43,12 +42,13 @@
 <script>
 import axios from "axios";
 export default {
-  name: "Admin",
+  name: "AdminAlex",
   data() {
     return {
       trakingData: null,
     };
   },
+
   methods: {
     goHome() {
       this.$router.push({ name: "home" });
@@ -68,7 +68,7 @@ export default {
   },
 
   async mounted() {
-    const response = await axios.get("api/listenlex");
+    const response = await axios.get("api/alex");
     this.trakingData = response.data;
   },
 };

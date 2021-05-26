@@ -5,12 +5,12 @@
     </div>
     <div style="text-align: left" class="p-col-8 p-offset-2 ">
       <p id="instruction">
-        This test measures your receptive aural vocabulary size of English You
+        This test measures your receptive aural vocabulary size of English. You
         will hear a number of English words. Some of these words are real
         English words and some are invented but are made to sound like real
         words. Please press ‘Yes’ for the words that you know or can use or ‘No’
         for the words you don’t know. Please be aware that responding yes to the
-        non-words will severely affect your scores. If you want to hear a line
+        non-words will severely affect your scores. If you want to hear a word
         again press <b> REPEAT.</b>
       </p>
     </div>

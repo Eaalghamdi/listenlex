@@ -12,7 +12,7 @@
     </div>
   </section>
 
-  <div v-if="index == 119" class="p-col-3 p-offset-9 marginTop3">
+  <div v-if="index == 120" class="p-col-3 p-offset-9 marginTop3">
     <Button
       class="p-button-lg p-button-success"
       @click="thankYou"
@@ -177,10 +177,6 @@ export default {
     },
 
     yes() {
-      this.index++;
-      if (this.index > this.audios.length - 1) {
-        this.index = 0;
-      }
       this.current = this.audios[this.index];
       this.play(this.current);
       this.trakingData.push({
@@ -191,12 +187,12 @@ export default {
       });
       this.submitData();
       console.log(this.trakingData[this.trakingData.length - 1]);
+      this.index++;
+      if (this.index == 120) {
+        this.$router.push({ name: "XLexFinish" });
+      }
     },
     no() {
-      this.index++;
-      if (this.index > this.audios.length - 1) {
-        this.index = 0;
-      }
       this.current = this.audios[this.index];
       this.play(this.current);
       this.trakingData.push({
@@ -207,15 +203,19 @@ export default {
       });
       this.submitData();
       console.log(this.trakingData[this.trakingData.length - 1]);
+      this.index++;
+      if (this.index == 120) {
+        this.$router.push({ name: "XLexFinish" });
+      }
     },
     repeat() {
-      this.current = this.audios[this.index];
-      this.play(this.current);
+      const rept = this.audios[this.index] - 1;
+      this.play(rept);
     },
 
     submitData() {
       axios
-        .post("api/alex", this.trakingData[this.trakingData.length - 1])
+        .post("api/xlex", this.trakingData[this.trakingData.length - 1])
         .then(
           function() {
             this.trakingData = [];

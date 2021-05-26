@@ -235,8 +235,8 @@ export default {
     },
     next() {
       this.index++;
-      if (this.index > this.audios.length - 1) {
-        this.index = 0;
+      if (this.index == 41) {
+        this.$router.push({ name: "ListenLexFinish" });
       }
       this.current = this.audios[this.index];
       this.play(this.current);
