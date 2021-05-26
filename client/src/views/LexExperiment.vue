@@ -1,7 +1,4 @@
 <template>
-  <div class="logo">
-    <img id="logo" src="@/assets/logo.png" />
-  </div>
   <section class="player  marginTop9">
     <div class="p-grid ">
       <div class="p-col-8 p-offset-2 experiment marginTop7">
@@ -275,7 +272,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 * {
   margin: 0;
   padding: 0;

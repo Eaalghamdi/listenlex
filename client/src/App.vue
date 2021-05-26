@@ -50,4 +50,27 @@
 .marginTop3 {
   margin-top: 3rem;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: #212121;
+  color: #fff;
+}
+main {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 25px;
+}
 </style>

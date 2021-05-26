@@ -5,9 +5,13 @@
         <h2 class="song-title">{{ current.title }} / 120</h2>
 
         <div class="controls">
-          <button class="yes" @click="yes">Yes</button>
-          <button class="prev" @click="repeat">Repeat</button>
           <button class="no" @click="no">No</button>
+          <button class="play" v-if="index == 0" @click="play">
+            Start
+          </button>
+          <button class="prev" v-else @click="repeat">Repeat</button>
+
+          <button class="yes" @click="yes">Yes</button>
         </div>
       </div>
     </div>
@@ -33,7 +37,6 @@ export default {
     return {
       current: {},
       index: 0,
-      isPlaying: false,
       audios: [
         {
           title: " 1",
@@ -653,11 +656,13 @@ export default {
         this.player.src = this.current.src;
       }
       this.player.play();
-
-      this.isPlaying = true;
     },
 
     yes() {
+      this.index++;
+      if (this.index == 120) {
+        this.$router.push({ name: "ALexFinish" });
+      }
       this.current = this.audios[this.index];
       this.play(this.current);
       this.trakingData.push({
@@ -668,13 +673,13 @@ export default {
       });
       this.submitData();
       console.log(this.trakingData[this.trakingData.length - 1]);
+    },
+
+    no() {
       this.index++;
       if (this.index == 120) {
         this.$router.push({ name: "ALexFinish" });
       }
-    },
-
-    no() {
       this.current = this.audios[this.index];
       this.play(this.current);
       this.trakingData.push({
@@ -685,10 +690,6 @@ export default {
       });
       this.submitData();
       console.log(this.trakingData[this.trakingData.length - 1]);
-      this.index++;
-      if (this.index == 120) {
-        this.$router.push({ name: "ALexFinish" });
-      }
     },
     repeat() {
       const rept = this.audios[this.index] - 1;
@@ -716,7 +717,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 * {
   margin: 0;
   padding: 0;
@@ -756,7 +757,6 @@ button {
 button:hover {
   opacity: 0.8;
 }
-.play,
 .no,
 .pause {
   font-size: 20px;
@@ -767,7 +767,16 @@ button:hover {
   color: #fff;
   background-color: red;
 }
-.next,
+.play {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 20px;
+  margin: 0px 15px;
+  border-radius: 6px;
+  color: #fff;
+  background-color: gray;
+}
+
 .prev {
   font-size: 16px;
   font-weight: 700;

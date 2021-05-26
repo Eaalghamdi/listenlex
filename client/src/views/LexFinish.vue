@@ -1,7 +1,4 @@
 <template>
-  <div class="logo">
-    <img id="logo" src="@/assets/logo.png" />
-  </div>
   <div class="p-grid marginTop7">
     <div class="p-col-8 p-offset-2">
       <p id="instruction">

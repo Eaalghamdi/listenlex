@@ -5,8 +5,8 @@
         <h2 class="song-title">{{ current.src }}</h2>
 
         <div class="controls">
-          <button class="yes" @click="yes">Yes</button>
           <button class="no" @click="no">No</button>
+          <button class="yes" @click="yes">Yes</button>
         </div>
       </div>
     </div>
@@ -32,7 +32,6 @@ export default {
     return {
       current: {},
       index: 0,
-      isPlaying: false,
       audios: [
         { title: " 1", src: "oak", wordId: 98 },
         { title: " 2", src: "waygood", wordId: 10 },
@@ -234,7 +233,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 * {
   margin: 0;
   padding: 0;
