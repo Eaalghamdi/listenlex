@@ -16,7 +16,7 @@ export default {
   name: "LexFinish",
   methods: {
     goHome() {
-      this.$router.push({ name: "home" });
+      this.$router.push({ name: "Home" });
     },
   },
 };
