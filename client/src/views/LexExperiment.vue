@@ -253,7 +253,7 @@ export default {
     },
     submitData() {
       axios
-        .post("api/activities", this.trakingData[this.trakingData.length - 1])
+        .post("api/listenlex", this.trakingData[this.trakingData.length - 1])
         .then(
           function() {
             this.trakingData = [];
